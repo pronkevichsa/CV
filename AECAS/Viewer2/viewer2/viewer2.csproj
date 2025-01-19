@@ -1,0 +1,179 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{358C968C-B008-4CD2-9161-2EC634E78984}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>viewer2</RootNamespace>
+    <AssemblyName>viewer2</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ADOWork.cs" />
+    <Compile Include="dbaseDataSet.cs">
+      <DependentUpon>dbaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EnergyReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnergyReport.Designer.cs">
+      <DependentUpon>EnergyReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnergySutki.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnergySutki.Designer.cs">
+      <DependentUpon>EnergySutki.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Power30.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Power30.Designer.cs">
+      <DependentUpon>Power30.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Power30Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Power30Report.Designer.cs">
+      <DependentUpon>Power30Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Power30.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Power30.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Power30Report.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Power30Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPower30.rdlc" />
+    <EmbeddedResource Include="SchetchikReport.rdlc" />
+    <EmbeddedResource Include="SchetchikReport.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SchetchikReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SutEnergygraph.rdlc" />
+    <EmbeddedResource Include="Energy.rdlc" />
+    <EmbeddedResource Include="EnergyReport.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EnergyReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnergySutki.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EnergySutki.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SutEnergy.rdlc" />
+    <EmbeddedResource Include="schetchik.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>schetchik.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="dbaseDataSet.xsc">
+      <DependentUpon>dbaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbaseDataSet.xss">
+      <DependentUpon>dbaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="schetchik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="schetchik.Designer.cs">
+      <DependentUpon>schetchik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SchetchikReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SchetchikReport.Designer.cs">
+      <DependentUpon>SchetchikReport.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dbase.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

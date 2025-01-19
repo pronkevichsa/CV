@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="dbaseConnectionString">
+      <ConnectionProperties>
+        <ConnectString>Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\dbase.mdb</ConnectString>
+        <DataProvider>OLEDB</DataProvider>
+      </ConnectionProperties>
+      <rd:DataSourceID>1cb90e6c-abe7-4043-9aad-e118e7099ad1</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <BottomMargin>2.5cm</BottomMargin>
+  <RightMargin>2.5cm</RightMargin>
+  <PageWidth>21cm</PageWidth>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>21cm</InteractiveWidth>
+  <rd:GridSpacing>0.25cm</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <Body>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <ReportItems>
+      <Textbox Name="textbox13">
+        <Left>7.5cm</Left>
+        <Top>1.25cm</Top>
+        <rd:DefaultName>textbox13</rd:DefaultName>
+        <ZIndex>4</ZIndex>
+        <Width>1.25cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontSize>8pt</FontSize>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.50265cm</Height>
+        <Value>квт/ч</Value>
+      </Textbox>
+      <Textbox Name="textbox2">
+        <Left>2cm</Left>
+        <Top>0.5cm</Top>
+        <rd:DefaultName>textbox2</rd:DefaultName>
+        <ZIndex>3</ZIndex>
+        <Width>5cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.75cm</Height>
+        <Value>ОАО "БобруйскАгроМаш"</Value>
+      </Textbox>
+      <Textbox Name="textbox11">
+        <Left>5.5cm</Left>
+        <Top>1.25cm</Top>
+        <rd:DefaultName>textbox11</rd:DefaultName>
+        <ZIndex>2</ZIndex>
+        <Width>1.75cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontSize>8pt</FontSize>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.50265cm</Height>
+        <Value>=IIf(Day(First(Fields!DataIn.Value, "dbaseDataSet_Energy30"))&lt;10,"0"+CStr(Day(First(Fields!DataIn.Value, "dbaseDataSet_Energy30"))),CStr(Day(First(Fields!DataIn.Value, "dbaseDataSet_Energy30"))))+"."+
+IIf(Month(First(Fields!DataIn.Value, "dbaseDataSet_Energy30"))&lt;10,"0"+CStr(Month(First(Fields!DataIn.Value, "dbaseDataSet_Energy30"))),CStr(Month(First(Fields!DataIn.Value, "dbaseDataSet_Energy30"))))+"."+
+IIf(Year(First(Fields!DataIn.Value, "dbaseDataSet_Energy30"))&lt;10,"0"+CStr(Year(First(Fields!DataIn.Value, "dbaseDataSet_Energy30"))),CStr(Year(First(Fields!DataIn.Value, "dbaseDataSet_Energy30"))))</Value>
+      </Textbox>
+      <Textbox Name="textbox10">
+        <Left>1.25cm</Left>
+        <Top>1.25cm</Top>
+        <rd:DefaultName>textbox10</rd:DefaultName>
+        <ZIndex>1</ZIndex>
+        <Width>4.25cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontSize>8pt</FontSize>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.5cm</Height>
+        <Value>Активная электроэнергия за</Value>
+      </Textbox>
+      <Table Name="table1">
+        <Footer>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox7">
+                      <rd:DefaultName>textbox7</rd:DefaultName>
+                      <ZIndex>7</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Top>Solid</Top>
+                          <Left>Solid</Left>
+                          <Right>Solid</Right>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BorderWidth>
+                          <Top>1pt</Top>
+                          <Left>1pt</Left>
+                          <Right>1pt</Right>
+                        </BorderWidth>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <BorderColor>
+                          <Top>Black</Top>
+                          <Left>Black</Left>
+                          <Right>Black</Right>
+                        </BorderColor>
+                        <BackgroundColor>LightGrey</BackgroundColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox8">
+                      <rd:DefaultName>textbox8</rd:DefaultName>
+                      <ZIndex>6</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Top>Solid</Top>
+                          <Left>Solid</Left>
+                          <Right>Solid</Right>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BorderWidth>
+                          <Top>1pt</Top>
+                          <Left>1pt</Left>
+                          <Right>1pt</Right>
+                        </BorderWidth>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontSize>8pt</FontSize>
+                        <BorderColor>
+                          <Top>Black</Top>
+                          <Left>Black</Left>
+                          <Right>Black</Right>
+                        </BorderColor>
+                        <BackgroundColor>LightGrey</BackgroundColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Sum(Fields!I1.Value, "dbaseDataSet_Energy30")+
+Sum(Fields!I2.Value, "dbaseDataSet_Energy30")+
+Sum(Fields!I3.Value, "dbaseDataSet_Energy30")+
+Sum(Fields!I4.Value, "dbaseDataSet_Energy30")+
+Sum(Fields!I5.Value, "dbaseDataSet_Energy30")+
+Sum(Fields!I6.Value, "dbaseDataSet_Energy30")</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox12">
+                      <rd:DefaultName>textbox12</rd:DefaultName>
+                      <ZIndex>5</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Top>Solid</Top>
+                          <Left>Solid</Left>
+                          <Right>Solid</Right>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BorderWidth>
+                          <Top>1pt</Top>
+                          <Left>1pt</Left>
+                          <Right>1pt</Right>
+                        </BorderWidth>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontSize>8pt</FontSize>
+                        <BorderColor>
+                          <Top>Black</Top>
+                          <Left>Black</Left>
+                          <Right>Black</Right>
+                        </BorderColor>
+                        <BackgroundColor>LightGrey</BackgroundColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Sum(Fields!I7.Value, "dbaseDataSet_Energy30")+
+Sum(Fields!I8.Value, "dbaseDataSet_Energy30")+
+Sum(Fields!I9.Value, "dbaseDataSet_Energy30")+
+Sum(Fields!I10.Value, "dbaseDataSet_Energy30")+
+Sum(Fields!I11.Value, "dbaseDataSet_Energy30")+
+Sum(Fields!I12.Value, "dbaseDataSet_Energy30")</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox16">
+                      <rd:DefaultName>textbox16</rd:DefaultName>
+                      <ZIndex>4</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Top>Solid</Top>
+                          <Left>Solid</Left>
+                          <Right>Solid</Right>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BorderWidth>
+                          <Top>1pt</Top>
+                          <Left>1pt</Left>
+                          <Right>1pt</Right>
+                        </BorderWidth>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontSize>8pt</FontSize>
+                        <BorderColor>
+                          <Top>Black</Top>
+                          <Left>Black</Left>
+                          <Right>Black</Right>
+                        </BorderColor>
+                        <BackgroundColor>LightGrey</BackgroundColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Sum(Fields!I13.Value, "dbaseDataSet_Energy30")+
+Sum(Fields!I14.Value, "dbaseDataSet_Energy30")+
+Sum(Fields!I15.Value, "dbaseDataSet_Energy30")+
+Sum(Fields!I16.Value, "dbaseDataSet_Energy30")+
+Sum(Fields!I17.Value, "dbaseDataSet_Energy30")+
+Sum(Fields!I18.Value, "dbaseDataSet_Energy30")</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.5cm</Height>
+            </TableRow>
+          </TableRows>
+        </Footer>
+        <Left>0.5cm</Left>
+        <Top>2cm</Top>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox4">
+                      <rd:DefaultName>textbox4</rd:DefaultName>
+                      <ZIndex>3</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Left>Solid</Left>
+                          <Right>Solid</Right>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BorderWidth>
+                          <Left>1pt</Left>
+                          <Right>1pt</Right>
+                        </BorderWidth>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontSize>8pt</FontSize>
+                        <BorderColor>
+                          <Left>Black</Left>
+                          <Right>Black</Right>
+                        </BorderColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=IIf(Hour(Fields!TimeIn.Value)&lt;10,"0"+CStr(Hour(Fields!TimeIn.Value)),CStr(Hour(Fields!TimeIn.Value)))+":"+
+IIf(Minute(Fields!TimeIn.Value)&lt;10,"0"+CStr(Minute(Fields!TimeIn.Value)),CStr(Minute(Fields!TimeIn.Value)))</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox5">
+                      <rd:DefaultName>textbox5</rd:DefaultName>
+                      <ZIndex>2</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Left>Solid</Left>
+                          <Right>Solid</Right>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BorderWidth>
+                          <Left>1pt</Left>
+                          <Right>1pt</Right>
+                        </BorderWidth>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontSize>8pt</FontSize>
+                        <BorderColor>
+                          <Left>Black</Left>
+                          <Right>Black</Right>
+                        </BorderColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!I1.Value+Fields!I2.Value+Fields!I3.Value+Fields!I4.Value+Fields!I5.Value+Fields!I6.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox9">
+                      <rd:DefaultName>textbox9</rd:DefaultName>
+                      <ZIndex>1</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Left>Solid</Left>
+                          <Right>Solid</Right>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BorderWidth>
+                          <Left>1pt</Left>
+                          <Right>1pt</Right>
+                        </BorderWidth>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontSize>8pt</FontSize>
+                        <BorderColor>
+                          <Left>Black</Left>
+                          <Right>Black</Right>
+                        </BorderColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!I7.Value+Fields!I8.Value+Fields!I9.Value+Fields!I10.Value+Fields!I11.Value+Fields!I12.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox15">
+                      <rd:DefaultName>textbox15</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Left>Solid</Left>
+                          <Right>Solid</Right>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BorderWidth>
+                          <Left>1pt</Left>
+                          <Right>1pt</Right>
+                        </BorderWidth>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontSize>8pt</FontSize>
+                        <BorderColor>
+                          <Left>Black</Left>
+                          <Right>Black</Right>
+                        </BorderColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!I13.Value+Fields!I14.Value+Fields!I15.Value+Fields!I16.Value+Fields!I17.Value+Fields!I18.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.5cm</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox1">
+                      <rd:DefaultName>textbox1</rd:DefaultName>
+                      <ZIndex>11</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Bottom>Solid</Bottom>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BorderWidth>
+                          <Bottom>1pt</Bottom>
+                        </BorderWidth>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontSize>8pt</FontSize>
+                        <BorderColor>
+                          <Bottom>Black</Bottom>
+                        </BorderColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Время</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox3">
+                      <rd:DefaultName>textbox3</rd:DefaultName>
+                      <ZIndex>10</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Bottom>Solid</Bottom>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BorderWidth>
+                          <Bottom>1pt</Bottom>
+                        </BorderWidth>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontSize>8pt</FontSize>
+                        <BorderColor>
+                          <Bottom>Black</Bottom>
+                        </BorderColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Активная потребленная</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox6">
+                      <rd:DefaultName>textbox6</rd:DefaultName>
+                      <ZIndex>9</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Bottom>Solid</Bottom>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BorderWidth>
+                          <Bottom>1pt</Bottom>
+                        </BorderWidth>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontSize>8pt</FontSize>
+                        <BorderColor>
+                          <Bottom>Black</Bottom>
+                        </BorderColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Реактивная потребленная</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox14">
+                      <rd:DefaultName>textbox14</rd:DefaultName>
+                      <ZIndex>8</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Bottom>Solid</Bottom>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BorderWidth>
+                          <Bottom>1pt</Bottom>
+                        </BorderWidth>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontSize>8pt</FontSize>
+                        <BorderColor>
+                          <Bottom>Black</Bottom>
+                        </BorderColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Реактивная отданная</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>1.5cm</Height>
+            </TableRow>
+          </TableRows>
+        </Header>
+        <TableColumns>
+          <TableColumn>
+            <Width>1.25cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>2.5cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>2.5cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>2.25cm</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>2.5cm</Height>
+      </Table>
+    </ReportItems>
+    <Height>5cm</Height>
+  </Body>
+  <rd:ReportID>4422e8ed-4027-4de5-b4a3-a0112776385c</rd:ReportID>
+  <LeftMargin>2.5cm</LeftMargin>
+  <DataSets>
+    <DataSet Name="dbaseDataSet_Energy30">
+      <rd:DataSetInfo>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:DataSetName>dbaseDataSet</rd:DataSetName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterName>Energy30TableAdapter</rd:TableAdapterName>
+        <rd:TableName>Energy30</rd:TableName>
+      </rd:DataSetInfo>
+      <Query>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandText>SELECT DataIn, TimeIn, I1, I2, I3, I4, I5, I6, I7, I8, I9, I10, I11, I12, I13, I14, I15, I16, I17, I18, I19, I20, I21, I22, I23, I24, I25, I26, I27, I28, I29, I30, I31, I32 FROM Energy30</CommandText>
+        <DataSourceName>dbaseConnectionString</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="DataIn">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>DataIn</DataField>
+        </Field>
+        <Field Name="TimeIn">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>TimeIn</DataField>
+        </Field>
+        <Field Name="I1">
+          <rd:TypeName>System.Double</rd:TypeName>
+          <DataField>I1</DataField>
+        </Field>
+        <Field Name="I2">
+          <rd:TypeName>System.Double</rd:TypeName>
+          <DataField>I2</DataField>
+        </Field>
+        <Field Name="I3">
+          <rd:TypeName>System.Double</rd:TypeName>
+          <DataField>I3</DataField>
+        </Field>
+        <Field Name="I4">
+          <rd:TypeName>System.Double</rd:TypeName>
+          <DataField>I4</DataField>
+        </Field>
+        <Field Name="I5">
+          <rd:TypeName>System.Double</rd:TypeName>
+          <DataField>I5</DataField>
+        </Field>
+        <Field Name="I6">
+          <rd:TypeName>System.Double</rd:TypeName>
+          <DataField>I6</DataField>
+        </Field>
+        <Field Name="I7">
+          <rd:TypeName>System.Double</rd:TypeName>
+          <DataField>I7</DataField>
+        </Field>
+        <Field Name="I8">
+          <rd:TypeName>System.Double</rd:TypeName>
+          <DataField>I8</DataField>
+        </Field>
+        <Field Name="I9">
+          <rd:TypeName>System.Double</rd:TypeName>
+          <DataField>I9</DataField>
+        </Field>
+        <Field Name="I10">
+          <rd:TypeName>System.Double</rd:TypeName>
+          <DataField>I10</DataField>
+        </Field>
+        <Field Name="I11">
+          <rd:TypeName>System.Double</rd:TypeName>
+          <DataField>I11</DataField>
+        </Field>
+        <Field Name="I12">
+          <rd:TypeName>System.Double</rd:TypeName>
+          <DataField>I12</DataField>
+        </Field>
+        <Field Name="I13">
+          <rd:TypeName>System.Double</rd:TypeName>
+          <DataField>I13</DataField>
+        </Field>
+        <Field Name="I14">
+          <rd:TypeName>System.Double</rd:TypeName>
+          <DataField>I14</DataField>
+        </Field>
+        <Field Name="I15">
+          <rd:TypeName>System.Double</rd:TypeName>
+          <DataField>I15</DataField>
+        </Field>
+        <Field Name="I16">
+          <rd:TypeName>System.Double</rd:TypeName>
+          <DataField>I16</DataField>
+        </Field>
+        <Field Name="I17">
+          <rd:TypeName>System.Double</rd:TypeName>
+          <DataField>I17</DataField>
+        </Field>
+        <Field Name="I18">
+          <rd:TypeName>System.Double</rd:TypeName>
+          <DataField>I18</DataField>
+        </Field>
+        <Field Name="I19">
+          <rd:TypeName>System.Double</rd:TypeName>
+          <DataField>I19</DataField>
+        </Field>
+        <Field Name="I20">
+          <rd:TypeName>System.Double</rd:TypeName>
+          <DataField>I20</DataField>
+        </Field>
+        <Field Name="I21">
+          <rd:TypeName>System.Double</rd:TypeName>
+          <DataField>I21</DataField>
+        </Field>
+        <Field Name="I22">
+          <rd:TypeName>System.Double</rd:TypeName>
+          <DataField>I22</DataField>
+        </Field>
+        <Field Name="I23">
+          <rd:TypeName>System.Double</rd:TypeName>
+          <DataField>I23</DataField>
+        </Field>
+        <Field Name="I24">
+          <rd:TypeName>System.Double</rd:TypeName>
+          <DataField>I24</DataField>
+        </Field>
+        <Field Name="I25">
+          <rd:TypeName>System.Double</rd:TypeName>
+          <DataField>I25</DataField>
+        </Field>
+        <Field Name="I26">
+          <rd:TypeName>System.Double</rd:TypeName>
+          <DataField>I26</DataField>
+        </Field>
+        <Field Name="I27">
+          <rd:TypeName>System.Double</rd:TypeName>
+          <DataField>I27</DataField>
+        </Field>
+        <Field Name="I28">
+          <rd:TypeName>System.Double</rd:TypeName>
+          <DataField>I28</DataField>
+        </Field>
+        <Field Name="I29">
+          <rd:TypeName>System.Double</rd:TypeName>
+          <DataField>I29</DataField>
+        </Field>
+        <Field Name="I30">
+          <rd:TypeName>System.Double</rd:TypeName>
+          <DataField>I30</DataField>
+        </Field>
+        <Field Name="I31">
+          <rd:TypeName>System.Double</rd:TypeName>
+          <DataField>I31</DataField>
+        </Field>
+        <Field Name="I32">
+          <rd:TypeName>System.Double</rd:TypeName>
+          <DataField>I32</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <Width>9cm</Width>
+  <InteractiveHeight>29.7cm</InteractiveHeight>
+  <Language>en-US</Language>
+  <TopMargin>2.5cm</TopMargin>
+  <PageHeight>29.7cm</PageHeight>
+</Report>
