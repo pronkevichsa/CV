@@ -1,3 +1,0 @@
-﻿namespace viewer2
-{
-}
